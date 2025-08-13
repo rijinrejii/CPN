@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Content Scanner - Child Safety Tool</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<header>
+<h1><i class="fas fa-shield-alt"></i> Smart Content Scanner</h1>
+<p>AI-powered child safety image analysis tool</p>
+</header>
+<div class="upload-section">
+<div class="upload-area" id="uploadArea">
+<i class="fas fa-cloud-upload-alt"></i>
+<h3>Drag & Drop Images Here</h3>
+<p>or <span class="browse-btn">browse files</span></p>
+<input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+</div>
+<div class="upload-options">
+<button id="singleScanBtn" class="btn btn-primary">
+<i class="fas fa-image"></i> Single Image Scan
+</button>
+<button id="bulkScanBtn" class="btn btn-secondary">
+<i class="fas fa-images"></i> Bulk Scan
+</button>
+</div>
+</div>
+<div class="progress-section" id="progressSection" style="display: none;">
+<div class="progress-bar">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<p id="progressText">Processing...</p>
+</div>
+<div class="results-section" id="resultsSection" style="display: none;">
+<h2>Scan Results</h2>
+<div class="summary-stats" id="summaryStats"></div>
+<div class="results-grid" id="resultsGrid"></div>
+<div class="export-options">
+<button id="exportBtn" class="btn btn-export">
+<i class="fas fa-download"></i> Export Report
+</button>
+<button id="clearBtn" class="btn btn-clear">
+<i class="fas fa-trash"></i> Clear Results
+</button>
+</div>
+</div>
+</div>
+<div class="modal" id="detailModal">
+<div class="modal-content">
+<span class="close" id="closeModal">&times;</span>
+<h3 id="modalTitle">Image Analysis Details</h3>
+<div id="modalBody"></div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

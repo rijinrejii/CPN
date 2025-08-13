@@ -1,2 +1,1 @@
-# CPN
-Child Protection Network
+# Smart Content Scanner - Child Safety Tool
